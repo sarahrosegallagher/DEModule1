@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: kestra
+      POSTGRES_USER: kestra
+      POSTGRES_PASSWORD: k3str4
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+#command to run postgres
+#configure postgres with env variables
+#configure volumes - called mounting - mapping folder in hostmachine to in container
+#specify the port -map port on host machine to port on container, needed to send and receive query
+winpty docker run -it \
+  -e POSTGRES_USER="root" \
+  -e POSTGRES_PASSWORD="root" \
+  -e POSTGRES_DB="ny_taxi" \
+  -v "C:/Users/sarah/Desktop/D.A. Learning/data-engineering-zoomcamp/module1/ny_taxi_postgres_data:/var/lib/postgresql/data" \
+  -p 5432:5432 \
+  postgres:13
+
