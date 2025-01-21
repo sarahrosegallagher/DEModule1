@@ -10,3 +10,6 @@ ny_taxi_postgres_data/
 
 # Ignore Docker container logs
 *.log
+
+# Ignore parquet files
+*.parquet
