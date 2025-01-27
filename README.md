@@ -79,13 +79,15 @@ During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusi
 5. Over 10 miles 
 
 ### Solution 3. 
-See Homework1/SQL/Homework1.sql for query. 
-"Distance"	"count"
-"Up to 1 mile"	104802
-"1 to 3 miles"	198924
-"3 to 7 miles"	109603
-"7 to 10 miles"	27678
-"Over 10 miles"	35189
+See Homework1/SQL/Homework1.sql for query.   
+| Distance          | Count  |
+|-------------------|--------|
+| Up to 1 mile      | 104802 |
+| 1 to 3 miles      | 198924 |
+| 3 to 7 miles      | 109603 |
+| 7 to 10 miles     | 27678  |
+| Over 10 miles     | 35189  |
+
 
 
 ## Question 4. Longest trip for each day
@@ -98,9 +100,10 @@ Tip: For every day, we only care about one single trip with the longest distance
 ### Solution 4. 
 See Homework1/SQL/Homework1.sql for query. 
 
-"lpep_pickup_datetime"	"trip_distance"
+| lpep_pickup_datetime | trip_distance |
+|-----------------------|---------------|
+| 2019-10-31           | 515.89        |
 
-"2019-10-31"	515.89
 
 ## Question 5. Three biggest pickup zones
 
@@ -112,13 +115,12 @@ Consider only `lpep_pickup_datetime` when filtering by date.
 ### Solution 5. 
 See Homework1/SQL/Homework1.sql for query. 
 
-"PUDate"	    "Zone"	                    "sum"
+| PUDate     | Zone                   | Sum      |
+|------------|------------------------|----------|
+| 2019-10-18 | East Harlem North      | 18686.68 |
+| 2019-10-18 | East Harlem South      | 16797.26 |
+| 2019-10-18 | Morningside Heights    | 13029.79 |
 
-"2019-10-18"	"East Harlem North"	    18686.680000000088
-
-"2019-10-18"	"East Harlem South"	    16797.260000000075
-
-"2019-10-18"	"Morningside Heights"	13029.79000000003
 
 ## Question 6. Largest tip
 
@@ -131,9 +133,10 @@ We need the name of the zone, not the ID.
 ### Solution 6. 
 See Homework1/SQL/Homework1.sql for query. 
 
-"PUZone"	            "DOZone"	    "tip_amount"
+| PUZone             | DOZone       | Tip Amount |
+|--------------------|-------------|------------|
+| East Harlem North  | JFK Airport | 87.3       |
 
-"East Harlem North"	    "JFK Airport"	 87.3
 
 ## Terraform
 
