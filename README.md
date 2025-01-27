@@ -97,7 +97,9 @@ Tip: For every day, we only care about one single trip with the longest distance
 
 ### Solution 4. 
 See Homework1/SQL/Homework1.sql for query. 
+
 "lpep_pickup_datetime"	"trip_distance"
+
 "2019-10-31"	515.89
 
 ## Question 5. Three biggest pickup zones
@@ -109,9 +111,13 @@ Consider only `lpep_pickup_datetime` when filtering by date.
  
 ### Solution 5. 
 See Homework1/SQL/Homework1.sql for query. 
+
 "PUDate"	    "Zone"	                    "sum"
+
 "2019-10-18"	"East Harlem North"	    18686.680000000088
+
 "2019-10-18"	"East Harlem South"	    16797.260000000075
+
 "2019-10-18"	"Morningside Heights"	13029.79000000003
 
 ## Question 6. Largest tip
@@ -124,7 +130,9 @@ We need the name of the zone, not the ID.
 
 ### Solution 6. 
 See Homework1/SQL/Homework1.sql for query. 
+
 "PUZone"	            "DOZone"	    "tip_amount"
+
 "East Harlem North"	    "JFK Airport"	 87.3
 
 ## Terraform
